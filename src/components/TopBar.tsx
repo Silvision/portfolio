@@ -1,7 +1,5 @@
 import { ThemeProvider } from '@emotion/react';
 import './TopBar.css'
-import Button from '@mui/material/Button';
-import Icon from '@mui/material/Icon';
 import { createTheme } from '@mui/material/styles';
 import StyledButton from './StyledComponents/StyledButton';
 
