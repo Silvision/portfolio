@@ -3,31 +3,32 @@ import './TopBar.css'
 import Button from '@mui/material/Button';
 import Icon from '@mui/material/Icon';
 import { createTheme } from '@mui/material/styles';
+import StyledButton from './StyledComponents/StyledButton';
 
 declare module '@mui/material/styles' {
     interface Palette {
-      ochre: Palette['primary'];
+      darkButtons: Palette['primary'];
     }
   
     interface PaletteOptions {
-      ochre?: PaletteOptions['primary'];
+      darkButtons?: PaletteOptions['primary'];
     }
 }
   
   // Update the Button's color options to include an ochre option
 declare module '@mui/material/Button' {
     interface ButtonPropsColorOverrides {
-        ochre: true;
+      darkButtons: true;
     }
 }
 
 const theme = createTheme({
     palette: {
-      ochre: {
-        main: '#E3D026',
-        light: '#E9DB5D',
-        dark: '#A29415',
-        contrastText: '#242105',
+      darkButtons: {
+        main: '#272727',
+        light: '#f0f0f0',
+        dark: '#2d2d2d',
+        contrastText: '#a5a5a5',
       },
     },
 });
@@ -40,9 +41,9 @@ function TopBar() {
             <div className="top-bar">
             
                 <ThemeProvider theme={theme}>
-                    <Button variant="contained" color="ochre"> <Icon>appsIcon</Icon> </Button>
+                    <StyledButton icon='appsIcon'></StyledButton>
                     <div className="middle-content"><h1>Richard Nguyen</h1></div>
-                    <Button variant="contained" color="ochre"> <Icon>person</Icon> </Button>
+                    <StyledButton icon='person'></StyledButton>
                 </ThemeProvider>
 
             </div>
