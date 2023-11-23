@@ -55,7 +55,11 @@ function ProjectSquare() {
         onMouseLeave={handleMouseLeave}
       >
 
-        { isHovered ? (<video ref={videoRef} src={videoPath} style={{position: 'absolute', objectFit: 'cover', width: '100%', height: '100%',borderRadius: '1em'}} loop muted></video>) : <img src={imagePath} alt="Project Image" style={{position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', borderRadius: '1em'}} /> }
+        <div style={{ position: 'absolute', width: '100%', height: '100%', display: isHovered ? 'none' : 'block', }} >
+          <img src={imagePath} alt="Project Image" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '1em'}} />
+        </div>
+        
+        <video ref={videoRef} src={videoPath} style={{position: 'absolute', objectFit: 'cover', width: '100%', height: '100%', borderRadius: '1em', display: isHovered ? 'block' : 'none',}} loop muted></video>
 
       </Button>
     </>
