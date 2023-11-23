@@ -43,6 +43,7 @@ function StyledButton({icon}: StyledButtonProps) {
                 variant="contained"
                 color="darkButtons"
                 sx={{
+                    borderRadius: '0.5em',
                     '&:hover': {
                     '& .MuiIcon-root': {
                         color: '#f0f0f0',
