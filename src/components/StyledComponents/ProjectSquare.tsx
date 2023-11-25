@@ -44,7 +44,7 @@ function ProjectSquare({imageURL, videoURL}: ProjectSquareProps) {
         sx={{
             borderRadius: '1em',
             padding: '12em 12em',
-            transition: '0.5s',
+            transition: 'animation',
             '&:hover': {
                 background: '#1e9bff',
                 animation: `${glow} 0.5s ease-in-out forwards`,
