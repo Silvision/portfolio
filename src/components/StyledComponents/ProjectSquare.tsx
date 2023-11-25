@@ -1,9 +1,11 @@
 import { Button } from "@mui/material"
 import { keyframes } from "@emotion/react"
 import { useRef, useState } from "react";
-import videoPath from '../../assets/makessense.mp4'
-import imagePath from '../../assets/cover15.jpg'
 
+type ProjectSquareProps = {
+  imageURL: string,
+  videoURL: string,
+}
 
 const glow = keyframes`
   25% {
@@ -16,11 +18,10 @@ const glow = keyframes`
     box-shadow: 0 0 30px #1e9bff;
   }
 `
-function ProjectSquare() {
-
+function ProjectSquare({imageURL, videoURL}: ProjectSquareProps) {
+  
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovered, setIsHovered] = useState(false);
-
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -56,10 +57,10 @@ function ProjectSquare() {
       >
 
         <div style={{ position: 'absolute', width: '100%', height: '100%', display: isHovered ? 'none' : 'block', }} >
-          <img src={imagePath} alt="Project Image" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '1em'}} />
+          <img src={imageURL} alt="Project Image" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '1em'}} />
         </div>
         
-        <video ref={videoRef} src={videoPath} style={{position: 'absolute', objectFit: 'cover', width: '100%', height: '100%', borderRadius: '1em', display: isHovered ? 'block' : 'none',}} loop muted></video>
+        <video ref={videoRef} src={videoURL} style={{position: 'absolute', objectFit: 'cover', width: '100%', height: '100%', borderRadius: '1em', display: isHovered ? 'block' : 'none',}} loop muted></video>
 
       </Button>
     </>
