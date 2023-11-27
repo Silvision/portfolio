@@ -1,26 +1,27 @@
-import './TopBar.css'
-import StyledButton from './StyledComponents/StyledButton';
-import { Outlet } from 'react-router-dom';
-
+import "./TopBar.css";
+import StyledButton from "./StyledComponents/StyledButton";
+import { Link, Outlet } from "react-router-dom";
 
 function TopBar() {
+  return (
+    <>
+      <div className="top-bar">
+        <Link to="/">
+          <StyledButton icon="appsIcon" />
+        </Link>
 
-    return (
-        <>
-            <div className="top-bar">
-            
-              <StyledButton icon='appsIcon'></StyledButton>
-              <div className="middle-content"><h1>Richard Nguyen</h1></div>
-              <StyledButton icon='person'></StyledButton>
+        <div className="middle-content">
+          <h1>Richard Nguyen</h1>
+        </div>
 
-            </div>
+        <StyledButton icon="person"></StyledButton>
+      </div>
 
-            <main>
-                <Outlet />
-            </main>
-        </>
-    )
-
+      <main>
+        <Outlet />
+      </main>
+    </>
+  );
 }
 
-export default TopBar
+export default TopBar;
