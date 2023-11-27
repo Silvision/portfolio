@@ -1,6 +1,6 @@
-import ProjectSquare from './StyledComponents/ProjectSquare';
-import image1 from '../assets/cover15.jpg'
-import video1 from '../assets/makessense.mp4'
+import ProjectSquare from './components/StyledComponents/ProjectSquare';
+import image1 from '../src/assets/cover15.jpg'
+import video1 from '../src/assets/makessense.mp4'
 
 
 function ProjectsGrid() {
