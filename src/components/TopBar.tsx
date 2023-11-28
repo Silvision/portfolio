@@ -1,6 +1,6 @@
 import "./TopBar.css";
 import StyledButton from "./StyledComponents/StyledButton";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function TopBar() {
   return (
@@ -16,10 +16,6 @@ function TopBar() {
 
         <StyledButton icon="person"></StyledButton>
       </div>
-
-      <main>
-        <Outlet />
-      </main>
     </>
   );
 }
