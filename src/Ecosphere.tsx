@@ -1,19 +1,15 @@
-
-
+import { motion } from "framer-motion";
 
 function Ecosphere() {
-
-    return (
-        <>
-            bark
-            <div> <h1> TESTING </h1></div>
-
-        
-        </>
-    )
-
-
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      bark
+    </motion.div>
+  );
 }
 
-
-export default Ecosphere
+export default Ecosphere;
