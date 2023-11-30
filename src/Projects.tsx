@@ -1,7 +1,8 @@
 import ProjectSquare from "./components/StyledComponents/ProjectSquare";
 import image1 from "../src/assets/cover15.jpg";
-import video1 from "../src/assets/makessense.mp4";
+import video1 from "../src/assets/EcosphereVideo.mp4";
 import { motion } from "framer-motion";
+import { Grid } from "@mui/material";
 
 function Projects() {
   return (
@@ -10,7 +11,14 @@ function Projects() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <ProjectSquare linkURL="ecosphere" imageURL={image1} videoURL={video1} />
+      <Grid>
+        <ProjectSquare
+          linkURL="ecosphere"
+          imageURL={image1}
+          videoURL={video1}
+        />
+        <ProjectSquare linkURL="ecosphere" imageURL={""} videoURL={""} />
+      </Grid>
     </motion.div>
   );
 }
