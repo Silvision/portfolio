@@ -56,6 +56,7 @@ function ProjectSquare({ linkURL, imageURL, videoURL }: ProjectSquareProps) {
           }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          disableRipple
         >
           <div
             style={{
