@@ -10,10 +10,6 @@ function TopBar() {
           <StyledButton icon="appsIcon" />
         </Link>
 
-        <div className="middle-content">
-          <h1>Richard Nguyen</h1>
-        </div>
-
         <StyledButton icon="person"></StyledButton>
       </div>
     </>

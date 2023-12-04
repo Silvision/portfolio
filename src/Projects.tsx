@@ -11,6 +11,10 @@ function Projects() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
+      <div className="nameBar">
+        <h1>Richard Nguyen</h1>
+      </div>
+
       <div className="container">
         <div className="item">
           <ProjectSquare

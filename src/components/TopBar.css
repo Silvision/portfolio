@@ -3,15 +3,3 @@
     justify-content: space-between;
     align-items: center;
 }
-  
-.left-content {
-    text-align: left;
-}
-
-.middle-content {
-    text-align: center;
-}
-
-.rigt-content {
-    text-align: right;
-}
