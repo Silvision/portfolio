@@ -1,6 +1,6 @@
 import ProjectSquare from "./components/StyledComponents/ProjectSquare";
-import image1 from "../src/assets/cover15.jpg";
-import video1 from "../src/assets/EcosphereVideo.mp4";
+import image1 from "./assets/cover15.jpg";
+import video1 from "./assets/EcosphereVideo.mp4";
 import { motion } from "framer-motion";
 import "./Projects.css";
 
