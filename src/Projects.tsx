@@ -7,13 +7,20 @@ import "./Projects.css";
 function Projects() {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: "10%" }}
+      animate={{ opacity: 1, y: "0%" }}
+      exit={{ opacity: 0, y: "10%" }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
     >
-      <div className="nameBar">
+      <motion.div
+        initial={{ y: "-300%" }}
+        animate={{ y: "0%" }}
+        exit={{ y: "-300%" }}
+        transition={{ duration: 0.25, ease: "easeInOut" }}
+        className="nameBar"
+      >
         <h1>Richard Nguyen</h1>
-      </div>
+      </motion.div>
 
       <div className="container">
         <div className="item">
