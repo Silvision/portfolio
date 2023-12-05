@@ -45,7 +45,8 @@ function ProjectSquare({ linkURL, imageURL, videoURL }: ProjectSquareProps) {
           variant="contained"
           sx={{
             borderRadius: "1em",
-            padding: "12em 12em",
+            width: "400px",
+            height: "400px",
             transition: "animation",
             "&:hover": {
               background: "#1e9bff",
