@@ -11,11 +11,9 @@ function Ecosphere() {
         background: `url(${background})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        width: "100%",
-        height: "100%",
       }}
     >
-      <div>
+      <div style={{ width: "100%", height: "720px" }}>
         <h1> Testin! </h1>
       </div>
     </motion.div>

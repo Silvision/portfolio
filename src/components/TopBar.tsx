@@ -10,7 +10,9 @@ function TopBar() {
           <StyledButton icon="appsIcon" />
         </Link>
 
-        <StyledButton icon="person"></StyledButton>
+        <Link to="profile">
+          <StyledButton icon="person" />
+        </Link>
       </div>
     </>
   );
