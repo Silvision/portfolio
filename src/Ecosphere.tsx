@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import background from "./assets/cover15.jpg";
+import background from "./assets/ecosphereCover.png";
 
 function Ecosphere() {
   return (

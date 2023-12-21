@@ -1,5 +1,5 @@
 import ProjectSquare from "./components/StyledComponents/ProjectSquare";
-import image1 from "./assets/cover15.jpg";
+import image1 from "./assets/ecosphereCover.png";
 import video1 from "./assets/EcosphereVideo.mp4";
 import { motion } from "framer-motion";
 import "./Projects.css";
@@ -32,11 +32,11 @@ function Projects() {
         </div>
 
         <div className="item">
-          <ProjectSquare linkURL="ecosphere" imageURL={""} videoURL={""} />
+          <ProjectSquare linkURL="" imageURL={""} videoURL={""} />
         </div>
 
         <div className="item">
-          <ProjectSquare linkURL="ecosphere" imageURL={""} videoURL={""} />
+          <ProjectSquare linkURL="" imageURL={""} videoURL={""} />
         </div>
       </div>
     </motion.div>
