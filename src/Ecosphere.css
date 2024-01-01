@@ -1,5 +1,20 @@
-.container {
-
-
+.container-project {
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    margin-top: 1rem;
     
+}
+
+.container-project-description {
+    font-size: 50px;
+
+
+}
+
+.container-project-carousel {
+
 }

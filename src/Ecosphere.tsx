@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import "./Ecosphere.css"
 
 function Ecosphere() {
   return (
@@ -7,8 +8,9 @@ function Ecosphere() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div>
-        <h1> EcoSphere </h1>
+      <div className="container-project">
+        <div className="container-project-description"> EcoSphere </div>
+        <div> Carousel </div>
       </div>
     </motion.div>
   );
