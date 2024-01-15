@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
-import "./Ecosphere.css"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { ecosphereMedia } from "./assets/images";
+import "./Ecosphere.css";
+import 'swiper/css';
 
 function Ecosphere() {
   return (
@@ -10,7 +13,20 @@ function Ecosphere() {
     >
       <div className="container-project">
         <div className="container-project-description"> EcoSphere </div>
-        <div> Carousel </div>
+        <div className="container-project-slider">
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+
+            <SwiperSlide> <img src={ecosphereMedia[0]}/> </SwiperSlide>
+            <SwiperSlide> Slide 2 </SwiperSlide>
+            <SwiperSlide> Slide 3 </SwiperSlide>
+
+          </Swiper>
+        </div>
       </div>
     </motion.div>
   );
