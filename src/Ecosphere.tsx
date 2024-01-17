@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
-import { Thumbs } from 'swiper/modules';
+import { Thumbs, Scrollbar } from 'swiper/modules';
 import { ecosphereMedia } from "./assets/images";
-import 'swiper/css';
 import "./Ecosphere.css";
+
+import 'swiper/css';
+import 'swiper/css/scrollbar'
+
 
 function Ecosphere() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass>();
@@ -36,9 +39,10 @@ function Ecosphere() {
 
           {/*Thumbs Swiper*/}
           <Swiper
-            modules={[Thumbs]}
+            modules={[Thumbs, Scrollbar]}
+            scrollbar={{el: '.swiperThumbs-scrollbar', draggable: true, hide: false}}
             watchSlidesProgress
-            slidesPerView={4}
+            slidesPerView={1}
             onSwiper={setThumbsSwiper}
             className="swiperThumbs"
           > 
@@ -47,6 +51,9 @@ function Ecosphere() {
             <SwiperSlide> Slide 3 </SwiperSlide>
 
           </Swiper>
+
+          <div className="swiperThumbs-scrollbar"></div>
+
         </div>
       </div>
     </motion.div>
