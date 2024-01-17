@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
 import { Thumbs } from 'swiper/modules';
 import { ecosphereMedia } from "./assets/images";
-import "./Ecosphere.css";
 import 'swiper/css';
+import "./Ecosphere.css";
 
 function Ecosphere() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass>();
@@ -21,7 +21,6 @@ function Ecosphere() {
           {/*Main Swiper*/}
           <Swiper
             spaceBetween={50}
-            slidesPerView={1}
             modules={[Thumbs]}
             thumbs={{swiper: thumbsSwiper  && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
             onSlideChange={() => console.log('slide change')}
@@ -39,6 +38,7 @@ function Ecosphere() {
           <Swiper
             modules={[Thumbs]}
             watchSlidesProgress
+            slidesPerView={4}
             onSwiper={setThumbsSwiper}
             className="swiperThumbs"
           > 

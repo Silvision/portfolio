@@ -1,5 +1,5 @@
 .container-project {
-    height: 50vh;
+    height: 75vh;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 10px;
@@ -20,20 +20,27 @@
 
 .swiper {
     width: 100%;
-    height: 100%;
 }
 
 .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .swiperMain{
-    height: 80%;
+    height: 67%;
+    padding-bottom: 2%;
+}
+
+.swiperMain .swiper-slide img {
+    object-fit: scale-down;
 }
 
 .swiperThumbs{
-    height: 20%;
+    height: 30%;
+}
+
+.swiperThumbs .swiper-slide img{
+    object-fit: cover;
 }
