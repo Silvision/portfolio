@@ -22,6 +22,15 @@
     height: 20%;
 }
 
+.swiperThumbs .swiper-slide {
+    height: auto;
+    margin: 5px;
+}
+
+.swiperThumbs .swiper-slide-thumb-active {
+    outline: solid;
+}
+
 /* Due to change depending on images I get? */
 .swiperThumbs .swiper-slide img {
     object-fit: cover;

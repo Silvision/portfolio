@@ -39,7 +39,7 @@ function ProjectSwiper() {
                 navigation={{prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next'}}
                 scrollbar={{el: '.swiperThumbs-scrollbar', draggable: true, hide: false}}
                 watchSlidesProgress
-                slidesPerView={3}
+                slidesPerView={5}
                 onSwiper={setThumbsSwiper}
                 className="swiperThumbs"
                 > 
