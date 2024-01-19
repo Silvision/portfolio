@@ -1,0 +1,56 @@
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.swiperMain{
+    height: 70%;
+    margin-bottom: 25px;
+}
+
+/* Due to change depending on images I get? */
+.swiperMain .swiper-slide img {
+    object-fit: cover;
+}
+
+.swiperThumbs{
+    height: 20%;
+}
+
+/* Due to change depending on images I get? */
+.swiperThumbs .swiper-slide img {
+    object-fit: cover;
+}
+
+.swiperThumbs-scrollbar {
+    margin: 3vh auto;
+    width: 90%;
+    height: 5px;
+    --swiper-scrollbar-drag-bg-color: white;
+}
+
+.swiperThumbs-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiper-button-prev {
+    position: relative !important;
+    height: auto !important;
+    margin-top: initial !important;
+    --swiper-navigation-size: 25px;
+    --swiper-theme-color: white;
+}
+
+.swiper-button-next {
+    position: relative !important;
+    height: auto !important;
+    margin-top: initial !important;
+    --swiper-navigation-size: 25px;
+    --swiper-theme-color: white;
+}
