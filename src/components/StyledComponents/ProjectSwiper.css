@@ -23,12 +23,11 @@
 }
 
 .swiperThumbs .swiper-slide {
-    height: auto;
-    margin: 5px;
+    box-sizing: border-box;
 }
 
 .swiperThumbs .swiper-slide-thumb-active {
-    outline: solid;
+    border: 3px solid red;
 }
 
 /* Due to change depending on images I get? */

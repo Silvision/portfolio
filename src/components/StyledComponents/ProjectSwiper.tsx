@@ -33,6 +33,8 @@ function ProjectSwiper({ projectMedia }: ProjectSwiperProps) {
                 <SwiperSlide> Slide 5 </SwiperSlide>
                 <SwiperSlide> Slide 6 </SwiperSlide>
                 <SwiperSlide> Slide 7 </SwiperSlide>
+                <SwiperSlide> Slide 6 </SwiperSlide>
+                <SwiperSlide> Slide 7 </SwiperSlide>
 
                 </Swiper>
 
@@ -42,7 +44,8 @@ function ProjectSwiper({ projectMedia }: ProjectSwiperProps) {
                 navigation={{prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next'}}
                 scrollbar={{el: '.swiperThumbs-scrollbar', draggable: true, hide: false}}
                 watchSlidesProgress
-                slidesPerView={5}
+                slidesPerView={3}
+                spaceBetween={10}
                 onSwiper={setThumbsSwiper}
                 className="swiperThumbs"
                 > 
@@ -51,6 +54,8 @@ function ProjectSwiper({ projectMedia }: ProjectSwiperProps) {
                 <SwiperSlide> Slide 3 </SwiperSlide>
                 <SwiperSlide> Slide 4 </SwiperSlide>
                 <SwiperSlide> Slide 5 </SwiperSlide>
+                <SwiperSlide> Slide 6 </SwiperSlide>
+                <SwiperSlide> Slide 7 </SwiperSlide>
                 <SwiperSlide> Slide 6 </SwiperSlide>
                 <SwiperSlide> Slide 7 </SwiperSlide>
 
