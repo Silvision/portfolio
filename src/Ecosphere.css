@@ -3,14 +3,12 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 10px;
-    background-color: #2196F3;
     padding: 10px;
     margin-top: 1rem;
 }
 
 .container-project-description {
-    font-size: 50px;
-
+    padding: 0px 10px;
 }
 
 .container-project-slider {

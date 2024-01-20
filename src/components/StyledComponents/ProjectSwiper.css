@@ -27,7 +27,7 @@
 }
 
 .swiperThumbs .swiper-slide-thumb-active {
-    border: 3px solid red;
+    border: 3px solid white;
 }
 
 /* Due to change depending on images I get? */
