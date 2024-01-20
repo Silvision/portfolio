@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
-import "./Ecosphere.css";
+import { ecosphereMedia } from "./assets/images";
 import ProjectSwiper from "./components/StyledComponents/ProjectSwiper";
+
+import "./Ecosphere.css";
 
 function Ecosphere() {
 
@@ -12,7 +14,7 @@ function Ecosphere() {
     >
       <div className="container-project">
         <div className="container-project-description"> EcoSphere </div>
-        <div className="container-project-slider"> <ProjectSwiper/> </div>
+        <div className="container-project-slider"> <ProjectSwiper projectMedia={ecosphereMedia}/> </div>
         
       </div>
     </motion.div>

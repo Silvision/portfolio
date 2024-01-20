@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
 import { Thumbs, Scrollbar, Navigation } from 'swiper/modules';
-import { ecosphereMedia } from "../../assets/images";
 import './ProjectSwiper.css'
 
 import 'swiper/css';
 import 'swiper/css/scrollbar'
 import 'swiper/css/navigation'
 
-function ProjectSwiper() {
+type ProjectSwiperProps = {
+    projectMedia: string[]; 
+};
+
+function ProjectSwiper({ projectMedia }: ProjectSwiperProps) {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass>();
 
     return (
@@ -23,7 +26,7 @@ function ProjectSwiper() {
                 className="swiperMain"
                 >
 
-                <SwiperSlide> <img src={ecosphereMedia[0]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[0]}/> </SwiperSlide>
                 <SwiperSlide> Slide 2 </SwiperSlide>
                 <SwiperSlide> Slide 3 </SwiperSlide>
                 <SwiperSlide> Slide 4 </SwiperSlide>
@@ -43,7 +46,7 @@ function ProjectSwiper() {
                 onSwiper={setThumbsSwiper}
                 className="swiperThumbs"
                 > 
-                <SwiperSlide> <img src={ecosphereMedia[0]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[0]}/> </SwiperSlide>
                 <SwiperSlide> Slide 2 </SwiperSlide>
                 <SwiperSlide> Slide 3 </SwiperSlide>
                 <SwiperSlide> Slide 4 </SwiperSlide>
