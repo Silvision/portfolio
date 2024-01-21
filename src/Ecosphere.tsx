@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import { ecosphereMedia } from "./assets/images";
 import ProjectSwiper from "./components/StyledComponents/ProjectSwiper";
 
-import "./Ecosphere.css";
-
 function Ecosphere() {
 
   return (

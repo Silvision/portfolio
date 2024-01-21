@@ -27,10 +27,10 @@ function ProjectSwiper({ projectMedia }: ProjectSwiperProps) {
                 >
 
                 <SwiperSlide> <img src={projectMedia[0]}/> </SwiperSlide>
-                <SwiperSlide> Slide 2 </SwiperSlide>
-                <SwiperSlide> Slide 3 </SwiperSlide>
-                <SwiperSlide> Slide 4 </SwiperSlide>
-                <SwiperSlide> Slide 5 </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[1]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[2]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[3]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[4]}/> </SwiperSlide>
                 <SwiperSlide> Slide 6 </SwiperSlide>
                 <SwiperSlide> Slide 7 </SwiperSlide>
                 <SwiperSlide> Slide 6 </SwiperSlide>
@@ -44,16 +44,16 @@ function ProjectSwiper({ projectMedia }: ProjectSwiperProps) {
                 navigation={{prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next'}}
                 scrollbar={{el: '.swiperThumbs-scrollbar', draggable: true, hide: false}}
                 watchSlidesProgress
-                slidesPerView={3}
+                slidesPerView={4}
                 spaceBetween={10}
                 onSwiper={setThumbsSwiper}
                 className="swiperThumbs"
                 > 
                 <SwiperSlide> <img src={projectMedia[0]}/> </SwiperSlide>
-                <SwiperSlide> Slide 2 </SwiperSlide>
-                <SwiperSlide> Slide 3 </SwiperSlide>
-                <SwiperSlide> Slide 4 </SwiperSlide>
-                <SwiperSlide> Slide 5 </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[1]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[2]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[3]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[4]}/> </SwiperSlide>
                 <SwiperSlide> Slide 6 </SwiperSlide>
                 <SwiperSlide> Slide 7 </SwiperSlide>
                 <SwiperSlide> Slide 6 </SwiperSlide>
