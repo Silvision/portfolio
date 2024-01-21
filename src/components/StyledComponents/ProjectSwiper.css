@@ -33,7 +33,7 @@
 
 /* Due to change depending on images I get? */
 .swiperMain .swiper-slide img {
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .swiperThumbs{

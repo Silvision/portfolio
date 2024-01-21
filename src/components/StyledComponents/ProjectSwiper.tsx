@@ -31,10 +31,13 @@ function ProjectSwiper({ projectMedia }: ProjectSwiperProps) {
                 <SwiperSlide> <img src={projectMedia[2]}/> </SwiperSlide>
                 <SwiperSlide> <img src={projectMedia[3]}/> </SwiperSlide>
                 <SwiperSlide> <img src={projectMedia[4]}/> </SwiperSlide>
-                <SwiperSlide> Slide 6 </SwiperSlide>
-                <SwiperSlide> Slide 7 </SwiperSlide>
-                <SwiperSlide> Slide 6 </SwiperSlide>
-                <SwiperSlide> Slide 7 </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[5]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[6]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[7]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[8]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[9]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[10]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[11]}/> </SwiperSlide>
 
                 </Swiper>
 
@@ -54,10 +57,13 @@ function ProjectSwiper({ projectMedia }: ProjectSwiperProps) {
                 <SwiperSlide> <img src={projectMedia[2]}/> </SwiperSlide>
                 <SwiperSlide> <img src={projectMedia[3]}/> </SwiperSlide>
                 <SwiperSlide> <img src={projectMedia[4]}/> </SwiperSlide>
-                <SwiperSlide> Slide 6 </SwiperSlide>
-                <SwiperSlide> Slide 7 </SwiperSlide>
-                <SwiperSlide> Slide 6 </SwiperSlide>
-                <SwiperSlide> Slide 7 </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[5]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[6]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[7]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[8]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[9]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[10]}/> </SwiperSlide>
+                <SwiperSlide> <img src={projectMedia[11]}/> </SwiperSlide>
 
             </Swiper>
 
