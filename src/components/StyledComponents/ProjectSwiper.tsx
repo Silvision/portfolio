@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
-import { Thumbs, Scrollbar, Navigation } from 'swiper/modules';
+import { Thumbs, Scrollbar, Navigation, Controller } from 'swiper/modules';
 import './ProjectSwiper.css'
 
 import 'swiper/css';
@@ -21,49 +21,39 @@ function ProjectSwiper({ projectMedia }: ProjectSwiperProps) {
                 spaceBetween={50}
                 modules={[Thumbs]}
                 thumbs={{swiper: thumbsSwiper  && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                grabCursor
+                onSlideChange={(swiper) =>{
+                    thumbsSwiper?.slideTo(swiper.activeIndex);
+                }}
                 className="swiperMain"
-                >
+            >
 
-                <SwiperSlide> <img src={projectMedia[0]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[1]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[2]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[3]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[4]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[5]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[6]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[7]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[8]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[9]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[10]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[11]}/> </SwiperSlide>
+                {
+                    projectMedia.map((_, index) => {return <SwiperSlide key={index}> <img src={projectMedia[index]}/> </SwiperSlide>})
+                }
 
-                </Swiper>
+            </Swiper>
 
             {/*Thumbs Swiper*/}
             <Swiper
                 modules={[Thumbs, Scrollbar, Navigation]}
                 navigation={{prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next'}}
                 scrollbar={{el: '.swiperThumbs-scrollbar', draggable: true, hide: false}}
-                watchSlidesProgress
-                slidesPerView={4}
+                slidesPerView={5}
                 spaceBetween={10}
                 onSwiper={setThumbsSwiper}
+                centeredSlides
+                centeredSlidesBounds
+                grabCursor
+                onClick={(swiper) => {
+                    swiper.slideTo(swiper.clickedIndex);
+                }}
                 className="swiperThumbs"
-                > 
-                <SwiperSlide> <img src={projectMedia[0]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[1]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[2]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[3]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[4]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[5]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[6]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[7]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[8]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[9]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[10]}/> </SwiperSlide>
-                <SwiperSlide> <img src={projectMedia[11]}/> </SwiperSlide>
+            > 
+
+                {      
+                    projectMedia.map((_, index) => {return <SwiperSlide key={index}> <img src={projectMedia[index]}/> </SwiperSlide>})
+                }
 
             </Swiper>
 
