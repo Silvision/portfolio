@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
-import { Thumbs, Scrollbar, Navigation, Controller } from 'swiper/modules';
+import { Thumbs, Scrollbar, Navigation} from 'swiper/modules';
 import './ProjectSwiper.css'
 
 import 'swiper/css';
