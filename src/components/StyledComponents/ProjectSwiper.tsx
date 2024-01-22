@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
-import { Thumbs, Scrollbar, Navigation} from 'swiper/modules';
+import { Thumbs, Scrollbar, Navigation, Keyboard} from 'swiper/modules';
 import './ProjectSwiper.css'
 
 import 'swiper/css';
@@ -19,9 +19,10 @@ function ProjectSwiper({ projectMedia }: ProjectSwiperProps) {
             {/*Main Swiper*/}
             <Swiper
                 spaceBetween={50}
-                modules={[Thumbs]}
+                modules={[Thumbs, Keyboard]}
                 thumbs={{swiper: thumbsSwiper  && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
                 grabCursor
+                keyboard
                 onSlideChange={(swiper) =>{
                     thumbsSwiper?.slideTo(swiper.activeIndex);
                 }}
