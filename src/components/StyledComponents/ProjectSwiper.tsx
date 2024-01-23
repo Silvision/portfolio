@@ -9,9 +9,12 @@ import 'swiper/css/navigation'
 
 type ProjectSwiperProps = {
     projectMedia: string[]; 
+    embededVideo: boolean;
+    videoLink: string;
+    videoThumbnail: string;
 };
 
-function ProjectSwiper({ projectMedia }: ProjectSwiperProps) {
+function ProjectSwiper({ projectMedia, embededVideo, videoLink, videoThumbnail }: ProjectSwiperProps) {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass>();
 
     return (
@@ -29,6 +32,12 @@ function ProjectSwiper({ projectMedia }: ProjectSwiperProps) {
                 className="swiperMain"
             >
 
+                { embededVideo && 
+                        <SwiperSlide> 
+                            <iframe src={videoLink} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> 
+                        </SwiperSlide>
+                }
+                
                 {
                     projectMedia.map((_, index) => {return <SwiperSlide key={index}> <img src={projectMedia[index]}/> </SwiperSlide>})
                 }
@@ -52,6 +61,7 @@ function ProjectSwiper({ projectMedia }: ProjectSwiperProps) {
                 className="swiperThumbs"
             > 
 
+                { embededVideo && <SwiperSlide > <img src={videoThumbnail}/> </SwiperSlide>}  
                 {      
                     projectMedia.map((_, index) => {return <SwiperSlide key={index}> <img src={projectMedia[index]}/> </SwiperSlide>})
                 }

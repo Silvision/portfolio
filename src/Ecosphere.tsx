@@ -25,7 +25,9 @@ function Ecosphere() {
           </div>
         
         </div>
-        <div className="container-project-slider"> <ProjectSwiper projectMedia={ecosphereMedia}/> </div>
+        <div className="container-project-slider"> 
+          <ProjectSwiper projectMedia={ecosphereMedia} embededVideo={true} videoLink="https://www.youtube.com/embed/jVD6l2VARas?si=w3vGxLzcWUKnrOfv" videoThumbnail="http://img.youtube.com/vi/jVD6l2VARas/0.jpg"/> 
+        </div>
         
       </div>
     </motion.div>
