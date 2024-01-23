@@ -26,6 +26,12 @@ function ProjectSwiper({ projectMedia, embededVideo, videoLink}: ProjectSwiperPr
                 grabCursor
                 keyboard
                 onSlideChange={(swiper) =>{
+                    // How to stop the video, thanks to https://gist.github.com/cferdinandi/9044694
+                    const iframe = document.querySelector( 'iframe');
+                    if ( iframe ) {
+                        const iframeSrc = iframe.src;
+                        iframe.src = iframeSrc;
+                    }
                     thumbsSwiper?.slideTo(swiper.activeIndex);
                 }}
                 className="swiperMain"
@@ -38,7 +44,10 @@ function ProjectSwiper({ projectMedia, embededVideo, videoLink}: ProjectSwiperPr
                 }
                 
                 {
-                    projectMedia.map((_, index) => {return <SwiperSlide key={index}> <img src={projectMedia[index]}/> </SwiperSlide>})
+                    projectMedia.map((_, index) => {
+                        if (embededVideo && index === 0) return;
+                        return <SwiperSlide key={index}> <img src={projectMedia[index]}/> </SwiperSlide>
+                    })
                 }
 
             </Swiper>
@@ -64,8 +73,8 @@ function ProjectSwiper({ projectMedia, embededVideo, videoLink}: ProjectSwiperPr
                 {      
                     projectMedia.map((_, index) => {
                         if (embededVideo && index === 0) return;
-                        return <SwiperSlide key={index}> <img src={projectMedia[index]}/> </SwiperSlide>}
-                    )
+                        return <SwiperSlide key={index}> <img src={projectMedia[index]}/> </SwiperSlide>
+                    })
                 }
 
             </Swiper>
