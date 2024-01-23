@@ -11,10 +11,9 @@ type ProjectSwiperProps = {
     projectMedia: string[]; 
     embededVideo: boolean;
     videoLink: string;
-    videoThumbnail: string;
 };
 
-function ProjectSwiper({ projectMedia, embededVideo, videoLink, videoThumbnail }: ProjectSwiperProps) {
+function ProjectSwiper({ projectMedia, embededVideo, videoLink}: ProjectSwiperProps) {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass>();
 
     return (
@@ -61,9 +60,12 @@ function ProjectSwiper({ projectMedia, embededVideo, videoLink, videoThumbnail }
                 className="swiperThumbs"
             > 
 
-                { embededVideo && <SwiperSlide > <img src={videoThumbnail}/> </SwiperSlide>}  
+                { embededVideo && <SwiperSlide > <img src={projectMedia[0]}/> </SwiperSlide>}  
                 {      
-                    projectMedia.map((_, index) => {return <SwiperSlide key={index}> <img src={projectMedia[index]}/> </SwiperSlide>})
+                    projectMedia.map((_, index) => {
+                        if (embededVideo && index === 0) return;
+                        return <SwiperSlide key={index}> <img src={projectMedia[index]}/> </SwiperSlide>}
+                    )
                 }
 
             </Swiper>
