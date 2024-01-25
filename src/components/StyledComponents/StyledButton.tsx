@@ -4,7 +4,7 @@ import Icon from "@mui/material/Icon";
 import { createTheme } from "@mui/material/styles";
 
 type StyledButtonProps = {
-  icon: string;
+  icon: React.ReactNode;
   buttonColor: 'darkButtons' | 'playButton';
   buttonSize: 'small' | 'medium' | 'large' | 'extraLarge';
 };
@@ -54,7 +54,7 @@ const theme = createTheme({
       variants: [
         {
           props: { size: "extraLarge" },
-          style: { fontSize: 80, width: "100%", height: "100%" }
+          style: { fontSize: 32, width: "100%", height: "100%" }
         }
       ]
     }
@@ -62,6 +62,7 @@ const theme = createTheme({
 });
 
 function StyledButton({ icon, buttonColor, buttonSize}: StyledButtonProps) {
+  const IconComponent = typeof icon === 'string' ? <Icon>{icon}</Icon> : icon;
 
   return (
     <ThemeProvider theme={theme}>
@@ -78,7 +79,7 @@ function StyledButton({ icon, buttonColor, buttonSize}: StyledButtonProps) {
           },
         }}
       >
-        <Icon sx={{ color: "inherit" }}>{icon}</Icon>
+        {IconComponent}
       </Button>
     </ThemeProvider>
   );
