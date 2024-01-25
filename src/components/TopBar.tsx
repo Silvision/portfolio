@@ -7,11 +7,11 @@ function TopBar() {
     <>
       <div className="top-bar">
         <Link to="/">
-          <StyledButton icon="appsIcon" />
+          <StyledButton icon="appsIcon" buttonColor="darkButtons" buttonSize="medium" />
         </Link>
 
         <Link to="profile">
-          <StyledButton icon="person" />
+          <StyledButton icon="person" buttonColor="darkButtons" buttonSize="medium"/>
         </Link>
       </div>
     </>

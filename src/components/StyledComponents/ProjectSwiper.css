@@ -7,16 +7,24 @@
 }
 
 .container-project-description {
+    display: flex;
+    flex-direction: column;
     margin-right: 20px;
 }
 
 .container-project-description h1 {
-    font-size: 75px;
+    font-size: 3rem;
 }
 
 .container-project-description p {
     text-align: left;
     font-size: 20px;
+}
+
+.container-project-description .description-button {
+    height: 150px;
+    width: 50%;
+    align-self: flex-start;
 }
 
 .container-project-slider {

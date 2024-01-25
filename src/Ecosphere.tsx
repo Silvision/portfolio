@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ecosphereMedia } from "./assets/images";
 import ProjectSwiper from "./components/StyledComponents/ProjectSwiper";
+import StyledButton from "./components/StyledComponents/StyledButton";
 
 function Ecosphere() {
 
@@ -28,7 +29,8 @@ function Ecosphere() {
             </p>
           </div>
 
-          <button> Test </button>
+          <br/><br/>
+          <div className="description-button"> <StyledButton icon="play_circle_filled_two_tone" buttonColor="playButton" buttonSize="extraLarge"/> </div>
 
         </div>
         <div className="container-project-slider"> 
