@@ -2,7 +2,7 @@ import { ThemeProvider } from "@emotion/react";
 import Button from "@mui/material/Button";
 import Icon from "@mui/material/Icon";
 import { createTheme } from "@mui/material/styles";
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement } from "react";
 
 type StyledButtonProps = {
   icon: React.ReactNode;
