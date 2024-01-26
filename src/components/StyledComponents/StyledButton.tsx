@@ -44,9 +44,9 @@ const theme = createTheme({
     },
     playButton: {
       main:"#14b3d8",
-      light:"#000000",
+      light:"#ffffff",
       dark:"",
-      contrastText:"#000000",
+      contrastText:"#ffffff",
     },
   },
   
@@ -66,7 +66,15 @@ function StyledButton({ icon, buttonColor, buttonSize}: StyledButtonProps) {
   let iconComponent;
   // Check if it's a string for normal icons
   if (typeof icon === 'string'){
-    iconComponent = <Icon style={{scale: buttonSize === 'extraLarge' ? "300%" : "100%"}}>{icon}</Icon>
+    iconComponent = (
+      <Icon 
+        sx={{
+          scale: buttonSize === 'extraLarge' ? "300%" : "100%",
+        }}
+      >
+        {icon}
+      </Icon>
+    )
   }
   // Check if it's something else such as an ReactElement, where we passed in a component (example passed in <GitHubIcon />)
   else {
@@ -85,9 +93,15 @@ function StyledButton({ icon, buttonColor, buttonSize}: StyledButtonProps) {
         size={buttonSize}
         sx={{
           borderRadius: "0.5em",
+          // Yeah i'm tweaking idk why this works and I have to call MuiIcon-root up here in this scope, and not just once down below.. maybe it's because 
+          // it will make it apply OUTSIDE of just hovering?
+          '& .MuiIcon-root': {
+            transition: 'transform 0.2s ease-in-out',
+          },
           "&:hover": {
             "& .MuiIcon-root": {
               color: theme.palette[buttonColor].light,
+              transform: buttonSize === 'extraLarge' ? 'scale(110%)' : 'scale(100%)',
             },
           },
         }}
