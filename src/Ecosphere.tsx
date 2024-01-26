@@ -27,11 +27,10 @@ function Ecosphere() {
               <br/><br/>
               Some featured abilities can range from heals, massive sword slashes, meteor crashes, fireworks, and more.
               As for enemies, there are plenty to fight and discover, from fire types and stone golem bosses protecting their beloved, to massive penguins and a 
-              cave teethering with ice golems.
+              cave teeming with ice golems.
             </p>
           </div>
 
-          <br/><br/>
           <div className="description-buttons"> 
             <StyledButton icon="play_circle_filled_two_tone" buttonColor="playButton" buttonSize="extraLarge"/>  
             <StyledButton icon={<GitHubIcon/>} buttonColor="playButton" buttonSize="extraLarge"/>  
