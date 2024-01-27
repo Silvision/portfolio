@@ -8,6 +8,7 @@ type StyledButtonProps = {
   icon: React.ReactNode;
   buttonColor: 'darkButtons' | 'playButton';
   buttonSize: 'small' | 'medium' | 'large' | 'extraLarge';
+  text?: string;
 };
 
 declare module "@mui/material/styles" {
@@ -62,7 +63,7 @@ const theme = createTheme({
   }
 });
 
-function StyledButton({ icon, buttonColor, buttonSize}: StyledButtonProps) {
+function StyledButton({ icon, buttonColor, buttonSize, text}: StyledButtonProps) {
   let iconComponent;
   // Check if it's a string for normal icons
   if (typeof icon === 'string'){
@@ -101,6 +102,9 @@ function StyledButton({ icon, buttonColor, buttonSize}: StyledButtonProps) {
           '& .MuiSvgIcon-root': {
             transition: 'scale 0.2s ease-in-out',
           },
+          "& p": {
+            transition: 'scale 0.2s ease-in-out',
+          },
           "&:hover": {
             "& .MuiIcon-root": {
               color: theme.palette[buttonColor].light,
@@ -109,10 +113,14 @@ function StyledButton({ icon, buttonColor, buttonSize}: StyledButtonProps) {
             "& .MuiSvgIcon-root": {
               scale: buttonSize === 'extraLarge' ? '1.1' : '1',
             },
+            "& p": {
+              scale: buttonSize === 'extraLarge' ? '1.2' : '1',
+            },
           },
         }}
       >
         {iconComponent}
+        { text && <p style={{marginLeft:'15%'}}>{text}</p>}
       </Button>
     </ThemeProvider>
   );

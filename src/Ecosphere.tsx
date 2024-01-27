@@ -32,8 +32,8 @@ function Ecosphere() {
           </div>
 
           <div className="description-buttons"> 
-            <StyledButton icon="play_circle_filled_two_tone" buttonColor="playButton" buttonSize="extraLarge"/>  
-            <StyledButton icon={<GitHubIcon/>} buttonColor="playButton" buttonSize="extraLarge"/>  
+            <a style={{width: "100%"}} href="https://www.google.com/"> <StyledButton icon="play_circle_filled_two_tone" buttonColor="playButton" buttonSize="extraLarge" text="Play"/> </a>
+            <a style={{width: "100%"}} href="https://www.google.com/"> <StyledButton icon={<GitHubIcon/>} buttonColor="playButton" buttonSize="extraLarge"/> </a>
           </div>
 
         </div>
