@@ -44,7 +44,7 @@ const theme = createTheme({
     },
     playButton: {
       main:"#14b3d8",
-      light:"#ffffff",
+      light:"",
       dark:"",
       contrastText:"#ffffff",
     },
@@ -96,12 +96,18 @@ function StyledButton({ icon, buttonColor, buttonSize}: StyledButtonProps) {
           // Yeah i'm tweaking idk why this works and I have to call MuiIcon-root up here in this scope, and not just once down below.. maybe it's because 
           // it will make it apply OUTSIDE of just hovering?
           '& .MuiIcon-root': {
-            transition: 'transform 0.2s ease-in-out',
+            transition: 'scale 0.2s ease-in-out',
+          },
+          '& .MuiSvgIcon-root': {
+            transition: 'scale 0.2s ease-in-out',
           },
           "&:hover": {
             "& .MuiIcon-root": {
               color: theme.palette[buttonColor].light,
-              transform: buttonSize === 'extraLarge' ? 'scale(110%)' : 'scale(100%)',
+              scale: buttonSize === 'extraLarge' ? '3.5' : '1',
+            },
+            "& .MuiSvgIcon-root": {
+              scale: buttonSize === 'extraLarge' ? '1.1' : '1',
             },
           },
         }}
