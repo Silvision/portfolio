@@ -1,9 +1,9 @@
 .container-project {
-    height: 84vh; /* Not 85vh cuz on a specific resolution it creates a scrollbar*/
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 10px;
     margin-top: 2rem;
+    min-height: 85vh;
 }
 
 .container-project-description {
@@ -18,7 +18,14 @@
 
 .container-project-description p {
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.667;
+}
+
+@media screen and (min-width: 1920px) {
+    .container-project-description p {
+        font-size: 20px;
+    }
 }
 
 .container-project-description .description-buttons {
@@ -28,16 +35,15 @@
     gap: 10px;
     height: 15%;
     margin-top: auto;
+    justify-content: center;
     margin-bottom: 5.5rem;
 }
 
 .container-project-slider {
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 0;
 }
 
 .swiper {
-    width: 100%;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
@@ -87,7 +93,7 @@
 }
 
 .swiperThumbs-scrollbar {
-    margin: 3vh auto;
+    margin: 30px auto;
     width: 90%;
     height: 5px;
     --swiper-scrollbar-drag-bg-color: white;

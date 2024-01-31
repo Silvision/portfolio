@@ -70,7 +70,7 @@ function StyledButton({ icon, buttonColor, buttonSize, text}: StyledButtonProps)
     iconComponent = (
       <Icon 
         sx={{
-          scale: buttonSize === 'extraLarge' ? "300%" : "100%",
+          scale: buttonSize === 'extraLarge' ? "250%" : "100%",
         }}
       >
         {icon}
@@ -81,7 +81,7 @@ function StyledButton({ icon, buttonColor, buttonSize, text}: StyledButtonProps)
   else {
     iconComponent = (React.cloneElement(icon as ReactElement, {
       style: {
-        transform: `scale(${buttonSize === 'extraLarge' ? 3 : 1})`,
+        transform: `scale(${buttonSize === 'extraLarge' ? 2.5 : 1})`,
       }}
     ))
   }
@@ -108,19 +108,19 @@ function StyledButton({ icon, buttonColor, buttonSize, text}: StyledButtonProps)
           "&:hover": {
             "& .MuiIcon-root": {
               color: theme.palette[buttonColor].light,
-              scale: buttonSize === 'extraLarge' ? '3.5' : '1',
-            },
-            "& .MuiSvgIcon-root": {
-              scale: buttonSize === 'extraLarge' ? '1.1' : '1',
+              scale: buttonSize === 'extraLarge' ? '3.0' : '1',
             },
             "& p": {
               scale: buttonSize === 'extraLarge' ? '1.2' : '1',
+            },
+            "& .MuiSvgIcon-root": {
+              scale: buttonSize === 'extraLarge' ? '1.1' : '1',
             },
           },
         }}
       >
         {iconComponent}
-        { text && <p style={{marginLeft:'15%'}}>{text}</p>}
+        { text && <p style={{marginLeft:'15%', fontSize:"32px"}}>{text}</p>}
       </Button>
     </ThemeProvider>
   );
