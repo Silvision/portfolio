@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ecosphereMedia, ecosphereMediaSwiper } from "./assets/images";
 import ProjectSwiper from "./components/StyledComponents/ProjectSwiper";
 import StyledButton from "./components/StyledComponents/StyledButton";
-import './Ecosphere.css'
+import './components/ProjectDetails.css'
 
 
 function Ecosphere() {
@@ -42,7 +42,7 @@ function Ecosphere() {
         
       </div>
 
-      <div className="ecosphere-details">
+      <div className="project-details">
         <h1> Background </h1>
           <p>
             This was a basic learning / passion project between my friends and I, where we tried learning Unreal Engine 5 to make some semblance of a game. 
@@ -109,7 +109,7 @@ function Ecosphere() {
           </p>
 
           <br/>
-          <img style={{height:"40vw"}} src={ecosphereMedia[4]}/>
+          <img src={ecosphereMedia[4]}/>
           <br/>
 
           <p>
@@ -138,9 +138,9 @@ function Ecosphere() {
             </p>
 
             <br/>
-            <img style={{height:"40vw"}} src={ecosphereMedia[5]}/>
+            <img src={ecosphereMedia[5]}/>
             <br/>
-            <img style={{height:"40vw"}} src={ecosphereMedia[6]}/>
+            <img src={ecosphereMedia[6]}/>
             <br/>
 
           <h3> Abilities </h3>
