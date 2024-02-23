@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 type ProjectSquareProps = {
   linkURL: string;
   imageURL: string;
-  videoURL: string;
+  videoURL?: string;
 };
 
 const glow = keyframes`
@@ -25,8 +25,8 @@ function ProjectSquare({ linkURL, imageURL, videoURL }: ProjectSquareProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
-    setIsHovered(true);
-    if (videoRef.current) {
+    if (videoRef.current && videoURL) {
+      setIsHovered(true);
       videoRef.current.play();
     }
   };

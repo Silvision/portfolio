@@ -10,6 +10,8 @@ const importAll = (importedObject: Record<string, string>) => {
 const ecosphereMediaImport = importAll(import.meta.glob('./Ecosphere/*.{png,mp4,gif}', {as: 'url', eager: true}));
 const ecosphereMediaSwiperImport = importAll(import.meta.glob('./Ecosphere/swiperImages/*.{png,mp4}', {as: 'url', eager: true}));
 
-export const projectsMedia: string[] = [ecosphereMediaImport[0], ecosphereMediaImport[1]]
+const paintColorSwitchMediaImport = importAll(import.meta.glob('./PaintColorSwitch/*.{png,}', {as: 'url', eager: true}));
+
+export const projectsMedia: string[] = [ecosphereMediaImport[0], ecosphereMediaImport[1], paintColorSwitchMediaImport[0]]
 export const ecosphereMedia: string[] = ecosphereMediaImport
 export const ecosphereMediaSwiper: string[] = ecosphereMediaSwiperImport

@@ -31,7 +31,7 @@ function Projects() {
         </div>
 
         <div className="item">
-          <ProjectSquare linkURL="" imageURL={""} videoURL={""} />
+          <ProjectSquare linkURL="paintColorSwitch" imageURL={projectsMedia[2]}/>
         </div>
 
         <div className="item">
