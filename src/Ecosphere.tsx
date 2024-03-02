@@ -17,9 +17,9 @@ function Ecosphere() {
           <h1> EcoSphere </h1> 
           <div>
             <p>
-              EcoSphere is a 3D roguelike adventure game.
+              EcoSphere is a 3D roguelike adventure game created in Unreal Engine 5.
               <br/><br/>
-              Playing as either a Mage or Sword class, the player adventures through multiple biomes and encounters different types of enemies to destroy for EXP, gaining
+              The player, as a mage or swordsman, adventures through multiple biomes and encounters different types of enemies to destroy for EXP, gaining
               new strengths and abilities.
               Each run can have randomized abilities based on an element unlocked through the biomes the player is free to choose to adventure through.
               The randomization allows for new methods of fighting through each playthrough.

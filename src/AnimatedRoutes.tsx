@@ -3,6 +3,7 @@ import Projects from "./Projects";
 import Ecosphere from "./Ecosphere";
 import { AnimatePresence } from "framer-motion";
 import Profile from "./Profile";
+import PaintColorSwitch from "./PaintColorSwitch";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -13,6 +14,7 @@ function AnimatedRoutes() {
         <Route index element={<Projects />} />
         <Route path="profile" element={<Profile />} />
         <Route path="ecosphere" element={<Ecosphere />} />
+        <Route path="paintColorSwitch" element={<PaintColorSwitch/>} />
       </Routes>
     </AnimatePresence>
   );
