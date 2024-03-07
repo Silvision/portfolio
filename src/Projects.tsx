@@ -35,7 +35,7 @@ function Projects() {
         </div>
 
         <div className="item">
-          <ProjectSquare linkURL="" imageURL={""} videoURL={""} />
+          <ProjectSquare linkURL="" imageURL={projectsMedia[3]} />
         </div>
       </div>
     </motion.div>
