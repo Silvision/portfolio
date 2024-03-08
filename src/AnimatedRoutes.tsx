@@ -4,6 +4,7 @@ import Ecosphere from "./Ecosphere";
 import { AnimatePresence } from "framer-motion";
 import Profile from "./Profile";
 import PaintColorSwitch from "./PaintColorSwitch";
+import UltimuttDefenders from "./UltimuttDefenders";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -15,6 +16,7 @@ function AnimatedRoutes() {
         <Route path="profile" element={<Profile />} />
         <Route path="ecosphere" element={<Ecosphere />} />
         <Route path="paintColorSwitch" element={<PaintColorSwitch/>} />
+        <Route path="ultimuttDefenders" element={<UltimuttDefenders/>} />
       </Routes>
     </AnimatePresence>
   );

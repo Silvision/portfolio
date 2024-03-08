@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import ProjectSwiper from "./components/StyledComponents/ProjectSwiper";
 import StyledButton from "./components/StyledComponents/StyledButton";
-import { paintColorSwitchMediaSwiper } from "./assets/images";
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { ultimuttDefendersMediaSwiper } from "./assets/images";
 
 
-function PaintColorSwitch() {
+function UltimuttDefenders() {
 
     return (
         <motion.div
@@ -15,7 +14,7 @@ function PaintColorSwitch() {
       >
         <div className="container-project">
           <div className="container-project-description"> 
-            <h1> PaintColorSwitch </h1> 
+            <h1> Ultimutt Defenders </h1> 
             <div>
               <p>
                 PaintColorSwitch is a simple mod for Lethal Company with over <b>10k+</b> downloads, made in C#.
@@ -23,18 +22,16 @@ function PaintColorSwitch() {
                 From the popular co-op horror game Lethal Company, this mod enables players to switch through the colors of the paint can that exists in the game. By pressing 'T' on the keyboard
                 while holding the spray can, the color will cycle from Yellow -> Purple -> Green -> Red.
                 <br/><br/>
-                The mod is client-sided, and if on a server with others, will require all players to have it in order to have the same colors synced between everyone.
               </p>
             </div>
   
             <div className="description-buttons"> 
               <a style={{width: "50%"}} href="https://thunderstore.io/c/lethal-company/p/Silvision/PaintColorSwitch/" target="_"> <StyledButton icon="play_circle_filled_two_tone" buttonColor="playButton" buttonSize="extraLarge" text="Play"/> </a>
-              <a style={{width: "50%"}} href="https://github.com/Silvision/PaintColorSwitchMod" target="_"> <StyledButton icon={<GitHubIcon/>} buttonColor="playButton" buttonSize="extraLarge"/> </a>
             </div>
   
           </div>
           <div className="container-project-slider"> 
-            <ProjectSwiper projectMedia={paintColorSwitchMediaSwiper} embededVideo={false} videoLink=""/> 
+            <ProjectSwiper projectMedia={ultimuttDefendersMediaSwiper} embededVideo={false} videoLink=""/> 
           </div>
           
         </div>
@@ -59,6 +56,6 @@ function PaintColorSwitch() {
 
 }
 
-export default PaintColorSwitch;
+export default UltimuttDefenders;
 
 
