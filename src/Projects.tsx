@@ -37,6 +37,18 @@ function Projects() {
         <div className="item">
           <ProjectSquare linkURL="ultimuttDefenders" imageURL={projectsMedia[3]} />
         </div>
+
+        <div className="item">
+          <ProjectSquare linkURL="" imageURL={projectsMedia[3]} />
+        </div>
+
+        <div className="item">
+          <ProjectSquare linkURL="" imageURL={projectsMedia[3]} />
+        </div>
+
+        <div className="item">
+          <ProjectSquare linkURL="" imageURL={projectsMedia[3]} />
+        </div>
       </div>
     </motion.div>
   );
