@@ -39,7 +39,7 @@ function Projects() {
         </div>
 
         <div className="item">
-          <ProjectSquare linkURL="" imageURL={projectsMedia[3]} />
+          <ProjectSquare linkURL="" imageURL={projectsMedia[4]} />
         </div>
 
         <div className="item">
