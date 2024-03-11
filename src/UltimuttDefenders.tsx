@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import ProjectSwiper from "./components/StyledComponents/ProjectSwiper";
-import StyledButton from "./components/StyledComponents/StyledButton";
 import { ultimuttDefendersMediaSwiper } from "./assets/images";
 
 

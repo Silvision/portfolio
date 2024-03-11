@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import Profile from "./Profile";
 import PaintColorSwitch from "./PaintColorSwitch";
 import UltimuttDefenders from "./UltimuttDefenders";
+import ReverseSokoban from "./ReverseSokoban";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -17,6 +18,7 @@ function AnimatedRoutes() {
         <Route path="ecosphere" element={<Ecosphere />} />
         <Route path="paintColorSwitch" element={<PaintColorSwitch/>} />
         <Route path="ultimuttDefenders" element={<UltimuttDefenders/>} />
+        <Route path="reverseSokoban" element={<ReverseSokoban/>} />
       </Routes>
     </AnimatePresence>
   );
