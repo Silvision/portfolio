@@ -8,6 +8,8 @@ import UltimuttDefenders from "./UltimuttDefenders";
 import ReverseSokoban from "./ReverseSokoban";
 import EternalReturn from "./EternalReturn";
 
+import ShellProgram from "./ShellProgram";
+
 function AnimatedRoutes() {
   const location = useLocation();
 
@@ -21,6 +23,8 @@ function AnimatedRoutes() {
         <Route path="ultimuttDefenders" element={<UltimuttDefenders/>} />
         <Route path="reverseSokoban" element={<ReverseSokoban/>} />
         <Route path="eternalReturn" element={<EternalReturn/>} />
+
+        <Route path="shellProgram" element={<ShellProgram/>} />
       </Routes>
     </AnimatePresence>
   );

@@ -24,9 +24,20 @@ const reverseSokobanMediaSwiperImport = importAll(import.meta.glob('./ReverseSok
 const eternalReturnMediaImport = importAll(import.meta.glob('./EternalReturn/*.{png,}', {as: 'url', eager: true}));
 const eternalReturnMediaSwiperImport = importAll(import.meta.glob('./EternalReturn/swiperImages/*.{png,gif}', {as: 'url', eager: true}));
 
+const shellProgramMediaImport = importAll(import.meta.glob('./ShellProgram/*.{png,}', {as: 'url', eager: true}));
+const shellProgramMediaSwiperImport = importAll(import.meta.glob('./ShellProgram/swiperImages/*.{png,gif}', {as: 'url', eager: true}));
+
 export const profileMedia: string[] = profileMediaImport
 
-export const projectsMedia: string[] = [ecosphereMediaImport[0], ecosphereMediaImport[1], paintColorSwitchMediaImport[0], ultimuttDefendersMediaImport[0], reverseSokobanMediaImport[0], eternalReturnMediaImport[0]]
+export const projectsMedia: string[] = [
+    ecosphereMediaImport[0], 
+    ecosphereMediaImport[1], 
+    paintColorSwitchMediaImport[0], 
+    ultimuttDefendersMediaImport[0], 
+    reverseSokobanMediaImport[0], 
+    eternalReturnMediaImport[0],
+    shellProgramMediaImport[0]
+]
 
 export const ecosphereMedia: string[] = ecosphereMediaImport
 export const ecosphereMediaSwiper: string[] = ecosphereMediaSwiperImport
@@ -42,3 +53,7 @@ export const reverseSokobanMediaSwiper: string[] = reverseSokobanMediaSwiperImpo
 
 export const eternalReturnMedia: string[] = eternalReturnMediaImport
 export const eternalReturnMediaSwiper: string[] = eternalReturnMediaSwiperImport
+
+
+export const shellProgramMedia: string[] = shellProgramMediaImport
+export const shellProgramMediaSwiper: string[] = shellProgramMediaSwiperImport

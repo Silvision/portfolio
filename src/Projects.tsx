@@ -51,7 +51,7 @@ function Projects() {
         <h1> Other </h1>
         <div className="container">
           <div className="item">
-            <ProjectSquare linkURL="ecosphere" imageURL={projectsMedia[0]} videoURL={projectsMedia[1]}/>
+            <ProjectSquare linkURL="shellProgram" imageURL={projectsMedia[6]}/>
           </div>
 
         </div>
