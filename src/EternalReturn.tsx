@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import ProjectSwiper from "./components/StyledComponents/ProjectSwiper";
 import { eternalReturnMediaSwiper } from "./assets/images";
+import StyledButton from "./components/StyledComponents/StyledButton";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 
 function EternalReturn() {
@@ -13,20 +15,24 @@ function EternalReturn() {
       >
         <div className="container-project">
           <div className="container-project-description"> 
-            <h1> Eternal Return </h1> 
+            <h1> Eternal Return Stat Tracker </h1> 
               <div>
                 <p>
-                    Reverse Sokoban is a simple puzzle game with a slight twist on the standard box-pushing genre of puzzles, aka "Sokoban".
-                    <br/><br/>
-                    Armed with a grappling hook, the player's objective is to solve the puzzles for each room by either pulling the box instead of pushing,
-                    or by moving themselves to the box! Cross chasms, hold down buttons, and unlock doors in order to get through each level.
-                    <br/><br/>
+                  This is an Android application that tracks stats from the MOBA game, Eternal Return: Black Survival, developed and published by Nimble Neuron.
+                  Developed with Java in Android Studio, it uses Retrofit 2 as a REST client.
+                  <br/><br/>
+                  This application retrieves the stats through the game's REST API at Eternal Return's Developer Portal. It can display stats such as
+                  Match History, Wins, MMR, Placements, Leaderboards, and more.
+                  <br/><br/>
+                  The GIF quality is not great in this thrown-together slider, but if you'd like, you can refer to more in the GitHub link below.
+                  <br/><br/>
+                  This project is actually one of the ones I learned the most from, despite how oddly unpolished it is!
                 </p>
               </div>
 
-              {/* <div className="description-buttons"> 
-              <a style={{width: "50%"}} href="https://thunderstore.io/c/lethal-company/p/Silvision/PaintColorSwitch/" target="_"> <StyledButton icon="play_circle_filled_two_tone" buttonColor="playButton" buttonSize="extraLarge" text="Play"/> </a>
-              </div> */}
+              <div className="description-buttons"> 
+                <a style={{width: "50%"}} href="https://github.com/Team-TenZ/EternalReturnTracker" target="_"> <StyledButton icon={<GitHubIcon/>} buttonColor="playButton" buttonSize="extraLarge"/> </a>
+              </div>
               
           </div>
           <div className="container-project-slider"> 
@@ -38,59 +44,67 @@ function EternalReturn() {
         <div className="project-details">
           <h1> Background </h1>
             <p>
-              This project was another school group project that I managed to get a game out of instead of the normal class projects. I believe the goal of the class was to learn how to work with teammates, plan out a projection / application,
-              and apply the Agile methodology we learned. So as long as we followed that, we were able to create this game.
+              This project was an end-of-course project for CodePath's Android class. My friends and I were curious about learning mobile development for fun,
+              so during one of our spring semesters alongside our normal courses, we took this class and learned how to use Android Studio and work with APIs.
               <br/><br/>
 
-              My group members were excited to do a game, as two of us were experienced with it with one other project, and actually had the same idea of doing another game for this one. We planned what we wanted to do by highlighting what
-              everyone's strengths were to gauge what was possible. We also used the standard brainstorming method of dumping ideas on a document, and essentially voting and narrowing which ideas we liked the best.
-
+              The final project let us decide freely what we wanted to make, as long as it utilized what we learned during the course. Since my friends and I were extremely
+              into Eternal Return at the time, we thought it'd be cool if we could somehow combined these two.
               <br/><br/>
-              Of course, you can see we landed at a puzzle game. We wanted to have something relatively simple to present without too many mechanics, and were inspired to follow the Sokoban genre when the idea was brought up. The thing was, how
-              would we make it unique? By "reversing" how Sokoban works. Instead of pushing, we pull! How would we pull things? With a grappling hook! 
+
+              It first started with seeeing if ti was plausible, and we were lucky to find out that there was an API available to access game stats from the actual
+              game developers. There was only a few issues:
+              <br/><br/>
+
+              <li>1. I had to apply for access to the API </li>
+              <li>2. I had to navigate through the entire API by translating from Korean. </li>
 
             </p>
 
-          <h1> Development </h1>
-            <p>
-            Similar to one of my other projects, we divied up the development of the game first by volunteers for whoever wanted what part, and then by who had the experience to tackle the job. I ended up with mainly the level design.
-            The diagram below is showcases an extremely simple layout of how we wanted our C# classes to look like for our game.                
-            </p>
-
-            <h3> The Player </h3>
+          <h1> Challenges </h1>
+            <h3> Gaining Access </h3>
               <p>
-                We had a simple state machine for the player when they're in a state of pulling, or about to grapple, or walking, etc.
-                If the player was in their shooting state and shot their grapple, we would draw a raytrace in their direction and see if it hit a collision of a "box". If the box was hit, we'd move the player to the box. Relatively straight forward
-                process, and if the player was simply next to a box and there was space in the direction where they were colliding towards, the box would move to that spot.
-              </p>
-          
-            <h3> Tilemap </h3>
-              <p>
-                I used Unity tilemaps and followed a Brackeys tutorial (respect to a great Youtuber!) to create the levels. I learned about the tilemap collider 2D, which made collision pretty easy to setup on each level as long as I have my
-                grid objects for the walls, floors, and holes organized and separated correctly in the hierarchy window.
-                It was as simple as just attaching it to the tilemap containing walls and making sure the player also had a collider! 
+                Ok, so bullet point 1 wasn't actually all that difficult. It only involved us filling out a form along with our intended use case for the API. Pretty
+                standard stuff I think. The only issue that arose was when it took awhile and we were on a time-crunch, and also figuring out how to use our tokens.
+                We ended up using another friend's token since he got his access approved first for whatever reason, and so we went forward from there.               
               </p>
 
-            <h3> Level Design </h3>
+            <h3> Translating the API and Resources from Korean </h3>
               <p>
-                This was where I really learned I had to put some good amount of thoughts on how I wanted to lay out a puzzle level. For a lot of levels, I threw together some draft just to get a layout of a "nice" looking room,
-                but then it would change drastically as I had to actually put in the boxes, holes, and adjust the size of each room as needed to have spaces for boxes to be shoved.
-                A lot of effort went into imagining what a player would "initially" think of as a solution, then add a twist. I also used as much inspiration as I could from previous Sokoban games and puzzles, with some puzzles in Pokemon
-                being extremely helpful.
-                <br/> <br/>
-                It was actually pretty fun to give these levels to my friends and family the playtest! One of the levels took them particularly long which I thought was great and it wasn't impossible either. It was like a perfect chord of
-                not too easy, but not too hard.
-                <br/> <br/>
-                Since a couple of our teammates weren't familiar with Unity, and was relatively busy, I actually made a Youtube video tailored for our game to showcase how to quickly throw together a level. I figured it would help them
-                contribute, as well as learn the basics on what was needed for our project, and how we were doing it. They were able to follow it pretty fast and in return, deliver some levels as well!
+                Alright now this is where things got fun. Since the game was relatively new, and on top of that not originating in the US, but localized over here,
+                the game developers had their API mainly in all Korean. Looking back at it now, it wasn't too bad but with a combined problem of me using APIs for the first time, it was so confusing. I had no idea what to do
+                or where to start, but I figured the community could help, so I readied myself to start asking a lot of questions.
+                <br/><br/>
+
+                I went to the community developer Discord for the game, which was relatively small because the game was just released and well, not too big.
+                From there, I had to ALSO translate messages sent in the Discord to see what people were talking about. 
+                Half the time what I would try to "Ctrl + F" the code and errors, and they wouldn't appear because it was in the wrong language.
+                <br/><br/>
+
+                I was lucky that HTTP methods are universal, so looking for "GET", "POST", "UPDATE", and "DELETE" weren't in Korean, which also helped me lead to people
+                sending screenshots of code on how they sent API requests, but again since I was new, half the requests I looked at were not only mumbo jumbo for awhile,
+                but was hard to piece together since I was unfamiliar with the REST clients others were using.
+
+                <br/><br/>
+                Quite literally it took hours for me and my friends to piece together everything to where we understood the code. A lot of, "Oh this piece of code" is
+                actually what THIS does" to each other while trying to fit our API requests to match how people were doing it. The cherry on top was this was one of my
+                first experiences figuring out JSON and how to parse it. You would not believe how lost I was when I kept getting "undefined", when looking back now, I was
+                simply just accessing non-existent fields from what we got from the API LOL
 
               </p>
-              
+
           <h1> Conclusion </h1>
             <p>
-              This project was pretty easy-going. It was fun seeing another teammate with a passion for creating games help deliver this game. I learned a lot watching and talking to them, and it was also a nice to help others learn Unity
-              and have a guidance video for them to follow. It felt like I was a super miniature Unity Youtuber that helped others, which made me extremely happy. On top of that, creating puzzles that actually proved to have some difficulty
-              was the cherry on top.
+              This project was extremely tiring since it was just a side-project and not part of my real school curriculum. However I was extremely motivated to
+              figure out how APIs work and get data from a game that was popular at the time. It seemed awesome that I could show my friends, "Hey, these are your stats right now!"
+              right after they got out of playing some games.
+              <br/><br/>
+
+              Looking back this was also an amazing experience to learn about using APIs and parsing data we get back from them. It was a real struggle for sure,
+              but it laid the foundations for me in figuring out how they worked in the future. I'm now working with them daily, and it's almost comical how simple it really is, but
+              I'm grateful I struggled here instead of in the real world, where just like this project, requirements and resources are unfamiliar. It isn't like how classes
+              lay out easy access and clear instructions for what we want from our services. Just like translating Korean and adapting other people's advice and resources,
+              this all came together to be a surprising gold mine for experience despite being just a simple course outside of school.
             </p>
           
         </div>
