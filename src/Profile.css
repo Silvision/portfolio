@@ -1,0 +1,19 @@
+.container-profile {
+    display: flex;
+    align-items: center; /* Align items vertically */
+  }
+  
+  .text-profile {
+    flex: 1; /* Occupy equal space */
+    margin-right: 20px; /* Adjust spacing between text and image */
+    text-align: left; /* Left-align the text */
+    font-size: 20px;
+  }
+  
+  .image-profile {
+    flex: 1; /* Occupy equal space */
+  }
+  
+  .image-profile img {
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+  }

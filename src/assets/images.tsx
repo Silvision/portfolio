@@ -7,6 +7,8 @@ const importAll = (importedObject: Record<string, string>) => {
     return media;
 }
 
+const profileMediaImport = importAll(import.meta.glob('./*.{png,mp4,gif}', {as: 'url', eager: true}));
+
 const ecosphereMediaImport = importAll(import.meta.glob('./Ecosphere/*.{png,mp4,gif}', {as: 'url', eager: true}));
 const ecosphereMediaSwiperImport = importAll(import.meta.glob('./Ecosphere/swiperImages/*.{png,mp4}', {as: 'url', eager: true}));
 
@@ -21,6 +23,8 @@ const reverseSokobanMediaSwiperImport = importAll(import.meta.glob('./ReverseSok
 
 const eternalReturnMediaImport = importAll(import.meta.glob('./EternalReturn/*.{png,}', {as: 'url', eager: true}));
 const eternalReturnMediaSwiperImport = importAll(import.meta.glob('./EternalReturn/swiperImages/*.{png,gif}', {as: 'url', eager: true}));
+
+export const profileMedia: string[] = profileMediaImport
 
 export const projectsMedia: string[] = [ecosphereMediaImport[0], ecosphereMediaImport[1], paintColorSwitchMediaImport[0], ultimuttDefendersMediaImport[0], reverseSokobanMediaImport[0], eternalReturnMediaImport[0]]
 

@@ -46,9 +46,6 @@ function Projects() {
           <ProjectSquare linkURL="eternalReturn" imageURL={projectsMedia[5]} />
         </div>
 
-        <div className="item">
-          <ProjectSquare linkURL="" imageURL={projectsMedia[3]} />
-        </div>
       </div>
     </motion.div>
   );
