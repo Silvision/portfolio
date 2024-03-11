@@ -20,32 +20,41 @@ function Projects() {
       >
         <h1>Richard Nguyen</h1>
       </motion.div>
+    
+      <div>
+        <h1> Games </h1>
+        <div className="container">
+          <div className="item">
+            <ProjectSquare linkURL="ecosphere" imageURL={projectsMedia[0]} videoURL={projectsMedia[1]}/>
+          </div>
 
-      <div className="container">
-        <div className="item">
-          <ProjectSquare
-            linkURL="ecosphere"
-            imageURL={projectsMedia[0]}
-            videoURL={projectsMedia[1]}
-          />
+          <div className="item">
+            <ProjectSquare linkURL="paintColorSwitch" imageURL={projectsMedia[2]}/>
+          </div>
+
+          <div className="item">
+            <ProjectSquare linkURL="ultimuttDefenders" imageURL={projectsMedia[3]} />
+          </div>
+
+          <div className="item">
+            <ProjectSquare linkURL="reverseSokoban" imageURL={projectsMedia[4]} />
+          </div>
+
+          <div className="item">
+            <ProjectSquare linkURL="eternalReturn" imageURL={projectsMedia[5]} />
+          </div>
+
         </div>
+      </div>
 
-        <div className="item">
-          <ProjectSquare linkURL="paintColorSwitch" imageURL={projectsMedia[2]}/>
+      <div>
+        <h1> Other </h1>
+        <div className="container">
+          <div className="item">
+            <ProjectSquare linkURL="ecosphere" imageURL={projectsMedia[0]} videoURL={projectsMedia[1]}/>
+          </div>
+
         </div>
-
-        <div className="item">
-          <ProjectSquare linkURL="ultimuttDefenders" imageURL={projectsMedia[3]} />
-        </div>
-
-        <div className="item">
-          <ProjectSquare linkURL="reverseSokoban" imageURL={projectsMedia[4]} />
-        </div>
-
-        <div className="item">
-          <ProjectSquare linkURL="eternalReturn" imageURL={projectsMedia[5]} />
-        </div>
-
       </div>
     </motion.div>
   );
