@@ -79,7 +79,7 @@ function ProjectSwiper({ projectMedia, embededVideo, videoLink}: ProjectSwiperPr
 
             </Swiper>
 
-            <div className="swiperThumbs-navigation">
+            <div className={`swiperThumbs-navigation ${projectMedia.length < 5 ? 'less-than-5-margin' : ''}`}>
                 <div className="swiper-button-prev"></div>
                 <div className="swiperThumbs-scrollbar"></div>
                 <div className="swiper-button-next"></div>

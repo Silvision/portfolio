@@ -6,6 +6,7 @@ import Profile from "./Profile";
 import PaintColorSwitch from "./PaintColorSwitch";
 import UltimuttDefenders from "./UltimuttDefenders";
 import ReverseSokoban from "./ReverseSokoban";
+import EternalReturn from "./EternalReturn";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function AnimatedRoutes() {
         <Route path="paintColorSwitch" element={<PaintColorSwitch/>} />
         <Route path="ultimuttDefenders" element={<UltimuttDefenders/>} />
         <Route path="reverseSokoban" element={<ReverseSokoban/>} />
+        <Route path="eternalReturn" element={<EternalReturn/>} />
       </Routes>
     </AnimatePresence>
   );

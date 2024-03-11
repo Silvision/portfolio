@@ -19,7 +19,10 @@ const ultimuttDefendersMediaSwiperImport = importAll(import.meta.glob('./Ultimut
 const reverseSokobanMediaImport = importAll(import.meta.glob('./ReverseSokoban/*.{png,}', {as: 'url', eager: true}));
 const reverseSokobanMediaSwiperImport = importAll(import.meta.glob('./ReverseSokoban/swiperImages/*.{png,}', {as: 'url', eager: true}));
 
-export const projectsMedia: string[] = [ecosphereMediaImport[0], ecosphereMediaImport[1], paintColorSwitchMediaImport[0], ultimuttDefendersMediaImport[0], reverseSokobanMediaImport[0]]
+const eternalReturnMediaImport = importAll(import.meta.glob('./EternalReturn/*.{png,}', {as: 'url', eager: true}));
+const eternalReturnMediaSwiperImport = importAll(import.meta.glob('./EternalReturn/swiperImages/*.{png,}', {as: 'url', eager: true}));
+
+export const projectsMedia: string[] = [ecosphereMediaImport[0], ecosphereMediaImport[1], paintColorSwitchMediaImport[0], ultimuttDefendersMediaImport[0], reverseSokobanMediaImport[0], eternalReturnMediaImport[0]]
 
 export const ecosphereMedia: string[] = ecosphereMediaImport
 export const ecosphereMediaSwiper: string[] = ecosphereMediaSwiperImport
@@ -32,3 +35,6 @@ export const ultimuttDefendersMediaSwiper: string[] = ultimuttDefendersMediaSwip
 
 export const reverseSokobanMedia: string[] = reverseSokobanMediaImport
 export const reverseSokobanMediaSwiper: string[] = reverseSokobanMediaSwiperImport
+
+export const eternalReturnMedia: string[] = eternalReturnMediaImport
+export const eternalReturnMediaSwiper: string[] = eternalReturnMediaSwiperImport

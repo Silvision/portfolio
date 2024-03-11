@@ -119,3 +119,7 @@
     --swiper-navigation-size: 25px;
     --swiper-theme-color: white;
 }
+
+.less-than-5-margin {
+    margin-top: 15px; /* Adjust the margin value as needed */
+}
