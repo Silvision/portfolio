@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Projects from "./Projects";
 import Ecosphere from "./Ecosphere";
 import { AnimatePresence } from "framer-motion";
@@ -19,18 +19,21 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes key={location.pathname} location={location}>
-        <Route path="portfolio" element={<Projects />} />
-        <Route path="profile" element={<Profile />} />
+      <Route path="/" element={<Navigate to="/portfolio"/>} />
+      <Route path="/portfolio">
+        <Route index element={<Projects />} />
         <Route path="ecosphere" element={<Ecosphere />} />
         <Route path="paintColorSwitch" element={<PaintColorSwitch/>} />
         <Route path="ultimuttDefenders" element={<UltimuttDefenders/>} />
         <Route path="reverseSokoban" element={<ReverseSokoban/>} />
         <Route path="eternalReturn" element={<EternalReturn/>} />
-
         <Route path="shellProgram" element={<ShellProgram/>} />
         <Route path="simpleFlixster" element={<SimpleFlixster/>} />
         <Route path="simpleTwitter" element={<SimpleTwitter/>} />
         <Route path="simpleInstagram" element={<SimpleInstagram/>} />
+      </Route>
+      
+      <Route path="/profile" element={<Profile />} />
 
       </Routes>
     </AnimatePresence>
