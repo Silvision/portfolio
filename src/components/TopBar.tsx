@@ -6,7 +6,7 @@ function TopBar() {
   return (
     <>
       <div className="top-bar">
-        <Link to="/">
+        <Link to="portfolio">
           <StyledButton icon="appsIcon" buttonColor="darkButtons" buttonSize="medium" />
         </Link>
 

@@ -19,7 +19,7 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes key={location.pathname} location={location}>
-        <Route index element={<Projects />} />
+        <Route path="portfolio" element={<Projects />} />
         <Route path="profile" element={<Profile />} />
         <Route path="ecosphere" element={<Ecosphere />} />
         <Route path="paintColorSwitch" element={<PaintColorSwitch/>} />
