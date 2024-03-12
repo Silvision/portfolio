@@ -34,6 +34,9 @@ const simpleFlixsterMediaSwiperImport = importAll(import.meta.glob('./SimpleFlix
 const simpleTwitterMediaImport = importAll(import.meta.glob('./SimpleTwitter/*.{png,}', {as: 'url', eager: true}));
 const simpleTwitterMediaSwiperImport = importAll(import.meta.glob('./SimpleTwitter/swiperImages/*.{png,gif}', {as: 'url', eager: true}));
 
+const simpleInstagramMediaImport = importAll(import.meta.glob('./SimpleInstagram/*.{png,}', {as: 'url', eager: true}));
+const simpleInstagramMediaSwiperImport = importAll(import.meta.glob('./SimpleInstagram/swiperImages/*.{png,gif}', {as: 'url', eager: true}));
+
 export const profileMedia: string[] = profileMediaImport
 
 export const projectsMedia: string[] = [
@@ -46,6 +49,7 @@ export const projectsMedia: string[] = [
     shellProgramMediaImport[0],
     simpleFlixsterMediaImport[0],
     simpleTwitterMediaImport[0],
+    simpleInstagramMediaImport[0],
 ]
 
 export const ecosphereMedia: string[] = ecosphereMediaImport
@@ -72,3 +76,6 @@ export const simpleFlixsterMediaSwiper: string[] = simpleFlixsterMediaSwiperImpo
 
 export const simpleTwitterMedia: string[] = simpleTwitterMediaImport
 export const simpleTwitterMediaSwiper: string[] = simpleTwitterMediaSwiperImport
+
+export const simpleInstagramMedia: string[] = simpleInstagramMediaImport
+export const simpleInstagramMediaSwiper: string[] = simpleInstagramMediaSwiperImport

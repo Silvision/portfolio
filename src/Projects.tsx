@@ -64,6 +64,10 @@ function Projects() {
             <ProjectSquare linkURL="simpleTwitter" imageURL={projectsMedia[8]}/>
           </div>
 
+          <div className="item">
+            <ProjectSquare linkURL="simpleInstagram" imageURL={projectsMedia[9]}/>
+          </div>
+
         </div>
       </div>
     </motion.div>

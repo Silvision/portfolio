@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import ProjectSwiper from "./components/StyledComponents/ProjectSwiper";
-import { simpleTwitterMediaSwiper } from "./assets/images";
+import { simpleInstagramMediaSwiper } from "./assets/images";
 import StyledButton from "./components/StyledComponents/StyledButton";
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 
-function SimpleTwitter() {
+function SimpleInstagram() {
 
     return (
       <motion.div
@@ -15,27 +15,23 @@ function SimpleTwitter() {
       >
         <div className="container-project">
           <div className="container-project-description"> 
-            <h1> Simple Twitter </h1> 
+            <h1> Simple Instagram </h1> 
               <div>
                 <p>
-                    This Android application is similar to Twitter. Users can log into their own Twitter acccounts after authorizing the application to access the account. Main features of the application include:
+                    This Android application is similar to Instagram. It has its own timeline where you can scroll and see posts of pictures from the app's database.
                     <br/><br/>
 
-                    <li> See Tweets from your timeline </li>
-                    <li> Post Tweets </li>
-                    <br/><br/>
-
-                    Developed with Java in Android Studio, it uses Twitter's API in order to push and pull data.
+                    Developed with Java in Android Studio, it uses Parse Open Source as the backend-as-a-service platform to power the database that holds the posts.
                 </p>
               </div>
 
               <div className="description-buttons"> 
-                <a style={{width: "50%"}} href="https://github.com/Silvision/SimpleTweet" target="_"> <StyledButton icon={<GitHubIcon/>} buttonColor="playButton" buttonSize="extraLarge" /> </a>
+                <a style={{width: "50%"}} href="https://github.com/Silvision/SimpleInstagram" target="_"> <StyledButton icon={<GitHubIcon/>} buttonColor="playButton" buttonSize="extraLarge" /> </a>
               </div>
               
           </div>
           <div className="container-project-slider"> 
-              <ProjectSwiper projectMedia={simpleTwitterMediaSwiper} embededVideo={false} videoLink=""/> 
+              <ProjectSwiper projectMedia={simpleInstagramMediaSwiper} embededVideo={false} videoLink=""/> 
           </div>
         
         </div>
@@ -52,6 +48,6 @@ function SimpleTwitter() {
 
 }
 
-export default SimpleTwitter;
+export default SimpleInstagram;
 
 
