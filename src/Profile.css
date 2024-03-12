@@ -17,3 +17,9 @@
   .image-profile img {
     max-width: 100%; /* Ensure image doesn't exceed container width */
   }
+
+.profile-description {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.667;
+}

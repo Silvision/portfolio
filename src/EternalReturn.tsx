@@ -23,9 +23,7 @@ function EternalReturn() {
                   <br/><br/>
                   This application retrieves the stats through the game's REST API at Eternal Return's Developer Portal. It can display stats such as
                   Match History, Wins, MMR, Placements, Leaderboards, and more.
-                  <br/><br/>
                   The GIF quality is not great in this thrown-together slider, but if you'd like, you can refer to more in the GitHub link below.
-                  <br/><br/>
                   This project is actually one of the ones I learned the most from, despite how oddly unpolished it is!
                 </p>
               </div>

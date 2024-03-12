@@ -9,6 +9,7 @@ import ReverseSokoban from "./ReverseSokoban";
 import EternalReturn from "./EternalReturn";
 
 import ShellProgram from "./ShellProgram";
+import SimpleFlixster from "./SimpleFlixster";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -25,6 +26,8 @@ function AnimatedRoutes() {
         <Route path="eternalReturn" element={<EternalReturn/>} />
 
         <Route path="shellProgram" element={<ShellProgram/>} />
+        <Route path="simpleFlixster" element={<SimpleFlixster/>} />
+
       </Routes>
     </AnimatePresence>
   );

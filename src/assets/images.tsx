@@ -27,6 +27,10 @@ const eternalReturnMediaSwiperImport = importAll(import.meta.glob('./EternalRetu
 const shellProgramMediaImport = importAll(import.meta.glob('./ShellProgram/*.{png,}', {as: 'url', eager: true}));
 const shellProgramMediaSwiperImport = importAll(import.meta.glob('./ShellProgram/swiperImages/*.{png,gif}', {as: 'url', eager: true}));
 
+
+const simpleFlixsterMediaImport = importAll(import.meta.glob('./SimpleFlixster/*.{png,}', {as: 'url', eager: true}));
+const simpleFlixsterMediaSwiperImport = importAll(import.meta.glob('./SimpleFlixster/swiperImages/*.{png,gif}', {as: 'url', eager: true}));
+
 export const profileMedia: string[] = profileMediaImport
 
 export const projectsMedia: string[] = [
@@ -36,7 +40,8 @@ export const projectsMedia: string[] = [
     ultimuttDefendersMediaImport[0], 
     reverseSokobanMediaImport[0], 
     eternalReturnMediaImport[0],
-    shellProgramMediaImport[0]
+    shellProgramMediaImport[0],
+    simpleFlixsterMediaImport[0],
 ]
 
 export const ecosphereMedia: string[] = ecosphereMediaImport
@@ -57,3 +62,6 @@ export const eternalReturnMediaSwiper: string[] = eternalReturnMediaSwiperImport
 
 export const shellProgramMedia: string[] = shellProgramMediaImport
 export const shellProgramMediaSwiper: string[] = shellProgramMediaSwiperImport
+
+export const simpleFlixsterMedia: string[] = simpleFlixsterMediaImport
+export const simpleFlixsterMediaSwiper: string[] = simpleFlixsterMediaSwiperImport

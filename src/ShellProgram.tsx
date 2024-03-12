@@ -20,15 +20,14 @@ function ShellProgram() {
                 <p>
                     This shell program is created in Ubuntu using C. The Mav Shell or, "msh", supports any Linux command found in the following
                     PATHs:
-                
-                    <ul style={{marginLeft: '2em'}}>
-                        <li>Current Working Directory</li>
-                        <li>/usr/local/bin</li>
-                        <li>/usr/bin</li>
-                        <li>/bin</li>
-                    </ul>
-
                     <br/><br/>
+
+                    <li>Current Working Directory</li>
+                    <li>/usr/local/bin</li>
+                    <li>/usr/bin</li>
+                    <li>/bin</li>
+                    <br/><br/>
+                    
                     It supports up to 10 command line parameters, fork a child process, and execute those commands.
 
                 </p>

@@ -18,16 +18,16 @@ function Profile() {
         <br/><br/>
         <div className="container-profile">
           <div className="text-profile">
-            <p>
+            <p className="profile-description">
               Hi! My name is Richard Nguyen, or "Silvision".
               <br/><br/>
-              I'm a full-stack Software Engineer with a passion for game development when I have the time.
+              I'm a full-stack Software Engineer with a passion for game development in my free time.
               <br/><br/>
-              I love to try and create things that make people happy, or find cool, and I want to help create an impact.
+              I enjoy creating things that people may find cool and exciting, and I want to help create an impact by making people happy.
               <br/><br/>
-              I enjoy what I create now as a Software Engineer, and as I journey through becoming a better engineer and learning new tech, I hope to someday also help
-              deliver products that have etched their names into the gaming community such as Lethal Company, Palworld, Baldurs Gate 3, and much more but especially
-              my main inspiration, League of Legends.
+              I love what I create as a Software Engineer, and someday I hope to deliver products that have etched their names into the gaming community – 
+              like Lethal Company, Palworld, Baldurs Gate 3, and especially my main inspiration, League of Legends – 
+              as I journey through learning new tech to become a better engineer.
               
             </p>
           </div>

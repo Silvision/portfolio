@@ -47,11 +47,17 @@ function Projects() {
         </div>
       </div>
 
+      <br/><br/>
+
       <div>
         <h1> Other </h1>
         <div className="container">
           <div className="item">
             <ProjectSquare linkURL="shellProgram" imageURL={projectsMedia[6]}/>
+          </div>
+
+          <div className="item">
+            <ProjectSquare linkURL="simpleFlixster" imageURL={projectsMedia[7]}/>
           </div>
 
         </div>
