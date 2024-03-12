@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { profileMedia } from "./assets/images";
 import './Profile.css'
 import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import StyledButton from "./components/StyledComponents/StyledButton";
 
 
@@ -19,7 +20,7 @@ function Profile() {
         <div className="container-profile">
           <div className="text-profile">
             <p className="profile-description">
-              Hi! My name is Richard Nguyen, or "Silvision".
+              Hi! My name is Richard Nguyen.
               <br/><br/>
               I'm a full-stack Software Engineer with a passion for game development in my free time.
               <br/><br/>
@@ -38,8 +39,9 @@ function Profile() {
         </div>
         
 
-        <div style={{marginTop: '5%', width: '50%', height: '175px', justifyContent: 'center'}}> 
+        <div style={{display: 'flex', flexDirection: 'row', gap: '10px', marginTop: '5%', width: '50%', height: '175px', justifyContent: 'center'}}> 
           <a style={{width: '50%'}} href="https://github.com/Silvision/" target='_'> <StyledButton icon={<GitHubIcon/>} buttonColor="playButton" buttonSize="extraLarge"/> </a>
+          <a style={{width: '50%'}} href="https://www.linkedin.com/in/richardmnguyen/" target='_'> <StyledButton icon={<LinkedInIcon/>} buttonColor="playButton" buttonSize="extraLarge"/> </a>
         </div>
       </div>
     </motion.div>
