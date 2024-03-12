@@ -21,7 +21,7 @@ function PaintColorSwitch() {
                 PaintColorSwitch is a simple mod for Lethal Company with over <b>10k+</b> downloads, made in C#.
                 <br/><br/>
                 From the popular co-op horror game Lethal Company, this mod enables players to switch through the colors of the paint can that exists in the game. By pressing 'T' on the keyboard
-                while holding the spray can, the color will cycle from Yellow -> Purple -> Green -> Red.
+                while holding the spray can, the color will cycle from Yellow -{'>'} Purple -{'>'} Green -{'>'} Red.
                 <br/><br/>
                 The mod is client-sided, and if on a server with others, will require all players to have it in order to have the same colors synced between everyone.
               </p>
