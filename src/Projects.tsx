@@ -60,6 +60,10 @@ function Projects() {
             <ProjectSquare linkURL="simpleFlixster" imageURL={projectsMedia[7]}/>
           </div>
 
+          <div className="item">
+            <ProjectSquare linkURL="simpleTwitter" imageURL={projectsMedia[8]}/>
+          </div>
+
         </div>
       </div>
     </motion.div>

@@ -10,6 +10,7 @@ import EternalReturn from "./EternalReturn";
 
 import ShellProgram from "./ShellProgram";
 import SimpleFlixster from "./SimpleFlixster";
+import SimpleTwitter from "./SimpleTwitter";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -27,6 +28,7 @@ function AnimatedRoutes() {
 
         <Route path="shellProgram" element={<ShellProgram/>} />
         <Route path="simpleFlixster" element={<SimpleFlixster/>} />
+        <Route path="simpleTwitter" element={<SimpleTwitter/>} />
 
       </Routes>
     </AnimatePresence>
