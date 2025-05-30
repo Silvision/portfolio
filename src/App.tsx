@@ -1,15 +1,15 @@
-import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import TopBar from "./components/TopBar";
 import AnimatedRoutes from "./AnimatedRoutes";
+import { HashRouter } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <TopBar />
         <AnimatedRoutes />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
