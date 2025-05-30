@@ -19,22 +19,18 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes key={location.pathname} location={location}>
-      <Route path="/" element={<Navigate to="/portfolio"/>} />
-      <Route path="/portfolio">
+        <Route path="/" element={<Navigate to="/portfolio" />} />
         <Route index element={<Projects />} />
         <Route path="ecosphere" element={<Ecosphere />} />
-        <Route path="paintColorSwitch" element={<PaintColorSwitch/>} />
-        <Route path="ultimuttDefenders" element={<UltimuttDefenders/>} />
-        <Route path="reverseSokoban" element={<ReverseSokoban/>} />
-        <Route path="eternalReturn" element={<EternalReturn/>} />
-        <Route path="shellProgram" element={<ShellProgram/>} />
-        <Route path="simpleFlixster" element={<SimpleFlixster/>} />
-        <Route path="simpleTwitter" element={<SimpleTwitter/>} />
-        <Route path="simpleInstagram" element={<SimpleInstagram/>} />
-      </Route>
-      
-      <Route path="/profile" element={<Profile />} />
-
+        <Route path="paintColorSwitch" element={<PaintColorSwitch />} />
+        <Route path="ultimuttDefenders" element={<UltimuttDefenders />} />
+        <Route path="reverseSokoban" element={<ReverseSokoban />} />
+        <Route path="eternalReturn" element={<EternalReturn />} />
+        <Route path="shellProgram" element={<ShellProgram />} />
+        <Route path="simpleFlixster" element={<SimpleFlixster />} />
+        <Route path="simpleTwitter" element={<SimpleTwitter />} />
+        <Route path="simpleInstagram" element={<SimpleInstagram />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </AnimatePresence>
   );

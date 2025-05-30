@@ -6,12 +6,20 @@ function TopBar() {
   return (
     <>
       <div className="top-bar">
-        <Link to="portfolio">
-          <StyledButton icon="appsIcon" buttonColor="darkButtons" buttonSize="medium" />
+        <Link to="/">
+          <StyledButton
+            icon="appsIcon"
+            buttonColor="darkButtons"
+            buttonSize="medium"
+          />
         </Link>
 
         <Link to="profile">
-          <StyledButton icon="person" buttonColor="darkButtons" buttonSize="medium"/>
+          <StyledButton
+            icon="person"
+            buttonColor="darkButtons"
+            buttonSize="medium"
+          />
         </Link>
       </div>
     </>
